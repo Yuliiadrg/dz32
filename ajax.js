@@ -1,19 +1,21 @@
+//Create object request
 const settings = {
+  //Where send request and parameters
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Key': '539ac9544bmsh9038ba6e494a847p1708e4jsne58ebb42946d',
 		'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
 	}
 };
-
+//On success request from server (variant of syntacis requst "fetch, then-catch")
 fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=game%20of%20thr', settings)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+	.then(response => response.json()) //parse response
+	.then(response => console.log(response)) 
+	.catch(err => console.error(err)); //handle error
 
-const myApiKey = "34731faf";
+const myApiKey = "34731faf"; 
 let currentPage = 1;
-
+//Call to elements from html
 const searchForm = document.getElementById("search-form");
 const movieList = document.getElementById("movie-list");
 const pagination = document.getElementById("pagination");
@@ -22,9 +24,9 @@ const movieDetails = document.getElementById("movie-details");
 function searchMovies(searchQuery, searchType) {
   const searchUrl = `https://www.omdbapi.com/?s=${searchQuery}&type=${searchType}&page=${currentPage}&apikey=${myApiKey}`;
 
-  fetch(searchUrl)
+  fetch(searchUrl) 
     .then(response => response.json())
-    .then(data => {
+    .then(data => { 
       if (data.Response === "True") {
         const movies = data.Search;
         const moviesHtml = movies.map(movie => {
@@ -35,13 +37,13 @@ function searchMovies(searchQuery, searchType) {
               <button class="details-btn" data-imdb-id="${movie.imdbID}">Details</button>
             </div>
           </div>`;
-        }).join("");
-        movieList.innerHTML = moviesHtml;
-
-        const totalPages = Math.ceil(data.totalResults / 10);
+        }).join(""); // eslint-disable-line
+        movieList.innerHTML = moviesHtml; 
+        
+        const totalPages = Math.ceil(data.totalResults / 10); 
         const buttonsHtml = Array.from({
           length: totalPages
-        }, (_, i) => {
+        }, (_, i) => { 
           const pageNum = i + 1;
           return `<button class="pagination-button ${pageNum === currentPage ? "active" : ""}">${pageNum}</button>`;
         }).join("");
