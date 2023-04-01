@@ -1,4 +1,4 @@
-const options = {
+const settings = {
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Key': '539ac9544bmsh9038ba6e494a847p1708e4jsne58ebb42946d',
@@ -6,7 +6,7 @@ const options = {
 	}
 };
 
-fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=game%20of%20thr', options)
+fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=game%20of%20thr', settings)
 	.then(response => response.json())
 	.then(response => console.log(response))
 	.catch(err => console.error(err));
