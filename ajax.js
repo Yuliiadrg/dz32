@@ -76,7 +76,7 @@ pagination.addEventListener("click", event => {
 movieList.addEventListener("click", event => {
   if (event.target.tagName === "BUTTON" && event.target.classList.contains("details-btn")) {
     const imdbID = event.target.dataset.imdbId;
-    const detailsUrl = `https://www.omdbapi.com/?i=${imdbID}&apikey=${apiKey}&plot=full`;
+    const detailsUrl = `https://www.omdbapi.com/?i=${imdbID}&apikey=${myApiKey}&plot=full`;
 
     fetch(detailsUrl)
       .then(response => response.json())
