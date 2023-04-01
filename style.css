@@ -1,0 +1,149 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(34, 34, 34);
+  color: #f5c518;
+}
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px;
+}
+h1 {
+  text-align: center;
+  color: #f5c518;
+}
+#search-form {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+}
+#search-form label {
+  margin-right: 2px;
+  padding: 10px 10px 10px 5px;
+}
+#search-form input{
+  padding: 8px 8px;
+  width: 158px;
+}
+input, label {
+  margin-top: 10px;
+}
+.input_btn--main {
+  padding: 6px 20px;
+  border-radius: 9px;
+  background: #f5c518;
+  border: none;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.input_btn--main:hover {
+  box-shadow: 7px 5px 56px -14px #f5c518;
+}
+.input_btn--main:active {
+  transform: scale(0.97);
+  box-shadow: 7px 5px 56px -10px #f5c518;
+}
+#movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.movie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie img {
+  width: 300px;
+  height: 400px;
+}
+
+.movie-info h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+.movie-details .movie-info h3 {
+  margin: auto;
+}
+
+.movie-details img {
+  margin-bottom: 10px;
+}
+
+.movie-card {
+  max-width: 350px;
+  width: 100%;
+  max-height: 500px;
+  height: 100%;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.movie-card h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.movie-card p {
+  margin: 0;
+}
+
+.pagination-button {
+  display: inline-block;
+  background-color: rgb(143, 154, 156);
+  margin-right: 5px;
+  padding: 5px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.pagination-button.active {
+  background-color: rgb(0, 0, 0);
+  color: rgb(172, 197, 201);
+}
+.pagination-button:hover {
+  background-color: rgb(121, 130, 132);
+  color: rgb(0, 0, 0);
+}
+#movie-details {
+  margin-top: 20px;
+}
+.details-btn {
+  padding: 10px 20px;
+  border-radius: 9px;
+  background: #f5c518;
+  border: none;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.details-btn:hover {
+  box-shadow: 7px 5px 56px -14px #f5c518;
+}
+.details-btn:active {
+  transform: scale(0.97);
+  box-shadow: 7px 5px 56px -10px #f5c518;
+}

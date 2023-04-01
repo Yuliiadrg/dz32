@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search (AJAX)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Movie Search</h1>
+        <!-- upper pagination--><div id="pagination"></div>
+        <form id="search-form">
+            <label for="type-select">Categorie:</label>
+            <select id="type-select" name="type-select">
+                <option value="movie">Movie</option>
+                <option value="series">Series</option>
+                <option value="episode">Episode</option>
+            </select>
+            <label for="search-actors">Search by actor:</label>
+            <input id="search-actors" name="search-actors" placeholder="typing actor" type="text" autocomplete="off">
+            <label for="search-input">Search for:</label>
+            <input type="text" autocomplete="off" id="search-input" name="search-input" placeholder="movie/ series/ episodes">
+            <button class="input_btn--main" type="submit">Search</button>
+        </form>
+        <div id="movie-list"></div>
+        <!-- lower pagination--><div id="pagination"></div>
+        <div id="movie-details"></div>
+    </div>
+    <script src="ajax.js"></script>
+</body>
+
+</html>
