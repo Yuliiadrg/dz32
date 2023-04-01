@@ -1,17 +1,15 @@
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '539ac9544bmsh9038ba6e494a847p1708e4jsne58ebb42946d',
-// 		'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
-// 	}
-// };
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '539ac9544bmsh9038ba6e494a847p1708e4jsne58ebb42946d',
+		'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
+	}
+};
 
-// fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=game%20of%20thr', options)
-// 	.then(response => response.json())
-// 	.then(response => console.log(response))
-// 	.catch(err => console.error(err));
-
-
+fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=game%20of%20thr', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
 
 const myApiKey = "34731faf";
 let currentPage = 1;
